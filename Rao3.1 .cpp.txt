@@ -1,0 +1,7 @@
+#include <iostream> // Rao 3.1
+enum Yourcards {Ace=43, Jack, Queen, King};
+
+int main() {
+  std::cout << Queen <<std::endl;
+  return 0;
+}
