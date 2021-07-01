@@ -1,0 +1,13 @@
+#include <iostream> // Rao 3.2
+
+int main() {
+  unsigned int uNum =85;
+  int sNum =-1600;
+  long lNum = 7.000000;
+  std::cout <<sizeof (uNum) << std::endl;
+  std::cout << sizeof (sNum)<< std::endl;
+  std::cout << sizeof (lNum) << std::endl;
+  std::cout << "sizeof (long) = sizeof (int) + sizeof (unsigned int)\n";
+   std::cout << sizeof (long)<<" = "<<sizeof (int)<<" + "<< sizeof (unsigned int);
+  return 0;
+}
