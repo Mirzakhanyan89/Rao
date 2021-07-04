@@ -1,0 +1,41 @@
+
+
+#include <iostream> //Rao 4/10
+const int size{3};
+void arrDiagonal_Chenge (int arr [size][size], int );
+
+int main (){
+  int arr[size][size];
+  std::cout<< "Enter "<< size * size << " numbers for array.\n";
+  for (int i=0; i<size; ++i)
+    { for (int j=0; j<size; ++j )
+        {
+          std::cin>> arr[i][j];
+        }
+    }
+  arrDiagonal_Chenge (arr, size);
+  return 0;
+}
+void arrDiagonal_Chenge (int arr [size][size], int size)
+{ 
+  int tmp = 0;
+  for (int i=0; i<size; ++i)
+    { for (int j=0; j<size; ++j )
+        { 
+          if (i == j)
+            {
+                tmp = arr[i][j];
+                arr[i][j] = arr[i][size-i-1];
+                arr[i][size-i-1] = tmp;
+
+            }
+        }
+    }
+  for (int i=0; i<size; ++i)
+    { for (int j=0; j<size; ++j )
+        {
+           std::cout<< arr[i][j]<<"\t"; 
+        }
+      std::cout<< "\n";
+    }
+ }

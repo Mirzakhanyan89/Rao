@@ -1,0 +1,32 @@
+
+
+#include <iostream> //Rao 4/7
+const int size{3};
+void arrDiagonal (int arr [size][size], int );
+
+int main (){
+  int arr[size][size];
+  std::cout<< "Enter "<< size * size << " numbers for array.\n";
+  for (int i=0; i<size; ++i)
+    { for (int j=0; j<size; ++j )
+        {
+          std::cin>> arr[i][j];
+        }
+    }
+  arrDiagonal (arr, size);
+  return 0;
+}
+void arrDiagonal (int arr [size][size], int size)
+{
+ for (int i=0; i<size; ++i)
+    { for (int j=0; j<size; ++j )
+        {
+            if (i == j)
+              {
+                std::cout<< arr[i][j] <<"\t";
+              }
+        }
+    }
+}
+
+

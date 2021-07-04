@@ -1,0 +1,33 @@
+
+#include <iostream> //Rao 4/13
+#include <vector>
+const int size{3};
+void matric_To_Arr (int arr [][size], int size );
+
+int main (){
+  int arr[size][size];
+  std::cout<< "Enter "<< size * size << " numbers for array.\n";
+  for (int i=0; i<size; ++i)
+    { for (int j=0; j< size; ++j)
+        {
+          std::cin>> arr[i][j];
+        } 
+    }
+  matric_To_Arr (arr, size);
+  return 0;
+}
+void matric_To_Arr (int arr [size][size], int size)
+{ 
+  std::vector <int> vec;
+  for (int i=0; i<size; ++i)
+    { for (int j=0; j< size; ++j)
+        {
+          vec.push_back(arr[i][j]);
+        }
+    }
+    for (int i=0; i<size*size; ++i)
+      {
+         std::cout<< vec[i] <<"\t";
+      }
+   
+ }
