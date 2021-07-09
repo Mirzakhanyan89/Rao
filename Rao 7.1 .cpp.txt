@@ -1,0 +1,29 @@
+#include <iostream> //Rao 7.1 girq
+double foo (double);
+double foo (double, double);
+const double pi= 3.14;
+
+int main() {
+  double radius =0;
+  double high = 0;
+  std::cout<< "Enter radius of cylinder and circle: \n";
+  std::cin>> radius;
+  std::cout<< "Enter high of cylinder: \n";
+  std::cin>> high;
+  foo(radius);
+  foo (radius, high);
+   
+  return 0;
+}
+double foo (double radius)
+{
+  double volumeCircle = (4*pi*radius*radius*radius)/3;
+  std::cout<< "volumeCircle = "<< volumeCircle <<"\n" ;
+  return volumeCircle;
+}
+double foo (double radius, double high)
+  {
+    double volumeCylinder = pi*radius*radius*high;
+    std::cout<<" volumeCylinder = " << volumeCylinder << "\n";
+    return volumeCylinder;
+  }
